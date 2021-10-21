@@ -45,8 +45,16 @@ const teamContainer = document.querySelector(".team-container");
 
 function teamCardsGenerator(){
     //devo creare un ciclo che per ogni oggetto nell'array del team genera un html con i parametri giusti
+    for (let i = 0; i < ourTeamArray.length; i++ ){
+        const singleMember = ourTeamArray[i];
+        console.log("il membro del team", singleMember);
+        for (let j in singleMember){
+            
+        }
+    }
+    
     //genero l'html nel team-container
-    teamContainer += `
+   /*  teamContainer += `
     <div class="team-card">
         <div class="card-image">
             <img
@@ -59,5 +67,7 @@ function teamCardsGenerator(){
             <p>Founder & CEO</p>
         </div>
     </div>
-    `
+    ` */
 }
+
+teamCardsGenerator()

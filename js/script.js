@@ -50,9 +50,9 @@ function teamCardsGenerator(){
         const singleMember = ourTeamArray[i];
         console.log("il membro del team", singleMember);
         
-        let singleName = console.log (singleMember["nome"])
-        let singleRole = console.log (singleMember["role"])
-        let singlePicture = console.log (singleMember["picture"])
+        let singleName =singleMember["nome"]
+        let singleRole =singleMember["role"]
+        let singlePicture =singleMember["picture"]
         
  
         //genero l'html nel team-container con i rispettivi parametri

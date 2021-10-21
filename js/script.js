@@ -52,24 +52,24 @@ function teamCardsGenerator(){
             
             console.log(singleMember[key])
 
+            //genero l'html nel team-container con i rispettivi parametri
+            /* teamContainer += `
+            <div class="team-card">
+            <div class="card-image">
+              <img
+                src="img/wayne-barnett-founder-ceo.jpg"
+                alt="Wayne Barnett"
+              />
+            </div>
+            <div class="card-text">
+              <h3>Wayne Barnett</h3>
+              <p>Founder & CEO</p>
+            </div>
+          </div> 
+            ` */
         }
     }
     
-    //genero l'html nel team-container
-    teamContainer += `
-    <div class="team-card">
-    <div class="card-image">
-      <img
-        src="img/wayne-barnett-founder-ceo.jpg"
-        alt="Wayne Barnett"
-      />
-    </div>
-    <div class="card-text">
-      <h3>Wayne Barnett</h3>
-      <p>Founder & CEO</p>
-    </div>
-  </div> 
-    `
 }
 
 teamCardsGenerator()

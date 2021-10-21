@@ -1,6 +1,6 @@
 /*  //todo
--creo l'array di oggetti che rappresentano ciascun membro del team
-    -ogni membro deve avere : Nome completo, ruolo e foto (questo è l'oggetto che deve andare nell'array di oggetti)
+//-creo l'array di oggetti che rappresentano ciascun membro del team
+    //-ogni membro deve avere : Nome completo, ruolo e foto (questo è l'oggetto che deve andare nell'array di oggetti)
 -stampo tutte le card del nostro team nel team-container
     
 -utiliziamo gli input già presenti nell'html per inserire nuovi membri nel team
@@ -40,3 +40,24 @@ const ourTeamArray = [
         picture: "barbara-ramos-graphic-designer.jpg"
     },
 ]
+
+const teamContainer = document.querySelector(".team-container");
+
+function teamCardsGenerator(){
+    //devo creare un ciclo che per ogni oggetto nell'array del team genera un html con i parametri giusti
+    //genero l'html nel team-container
+    teamContainer += `
+    <div class="team-card">
+        <div class="card-image">
+            <img
+                src="img/wayne-barnett-founder-ceo.jpg"
+                alt="Wayne Barnett"
+            />
+        </div>
+        <div class="card-text">
+            <h3>Wayne Barnett</h3>
+            <p>Founder & CEO</p>
+        </div>
+    </div>
+    `
+}

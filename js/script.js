@@ -82,23 +82,30 @@ let addMember = document.getElementById("addMemberButton");
 
 addMember.addEventListener("click", function(){
     /* al click del bottone voglio
-        -che vengano recuperati i valori da:
-            -input id="name"    
-            -input id="Role"    
-            -input id="image"    
-        -venga creato un oggetto con questi valori per
-            -nome
-            -role
-            -picture
+        //-che vengano recuperati i valori da:
+         //   -input id="name"    
+         //   -input id="Role"    
+         //   -input id="image"    
+        //-venga creato un oggetto con questi valori per
+         //   -nome
+         //   -role
+         //  -picture
+        //-inserisco i valori recuperati nell'oggetto
         -questo oggetto sia pushato nell'array ourTeams
             */
+           
+        
+        //creo l'oggetto
+        const newTeamMember = {}
+
+
     let newMemberName = document.getElementById("name").value;
     let newMemberRole = document.getElementById("role").value;
     let newMemberPicture = document.getElementById("image").value;
-    console.log(newMemberName);
-    console.log(newMemberRole);
-    console.log(newMemberPicture);
 
-    
-
+    //aggiunto i valori recuperati all'oggetto
+    newTeamMember.nome = newMemberName;
+    newTeamMember.role = newMemberRole;
+    newTeamMember.picture = newMemberPicture;
+    console.log("nuovo membro", newTeamMember)
 });

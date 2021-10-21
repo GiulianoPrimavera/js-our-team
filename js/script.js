@@ -1,7 +1,7 @@
 /*  //todo
 //-creo l'array di oggetti che rappresentano ciascun membro del team
     //-ogni membro deve avere : Nome completo, ruolo e foto (questo è l'oggetto che deve andare nell'array di oggetti)
--stampo tutte le card del nostro team nel team-container
+//-stampo tutte le card del nostro team nel team-container
     
 -utiliziamo gli input già presenti nell'html per inserire nuovi membri nel team
 
@@ -39,7 +39,7 @@ const ourTeamArray = [
         role: "Graphic Designer",
         picture: "barbara-ramos-graphic-designer.jpg"
     },
-]
+];
 
 
 function teamCardsGenerator(){
@@ -50,9 +50,9 @@ function teamCardsGenerator(){
         const singleMember = ourTeamArray[i];
         console.log("il membro del team", singleMember);
         
-        let singleName =singleMember["nome"]
-        let singleRole =singleMember["role"]
-        let singlePicture =singleMember["picture"]
+        let singleName =singleMember["nome"];
+        let singleRole =singleMember["role"];
+        let singlePicture =singleMember["picture"];
         
  
         //genero l'html nel team-container con i rispettivi parametri
@@ -69,10 +69,36 @@ function teamCardsGenerator(){
           <p>${singleRole}</p>
         </div>
       </div> 
-        ` 
+        ` ;
         
-    }
+    };
     
-}
+};
 
-teamCardsGenerator()
+teamCardsGenerator();
+
+//reucpero il bottone per aggiungere un membro del team
+let addMember = document.getElementById("addMemberButton");
+
+addMember.addEventListener("click", function(){
+    /* al click del bottone voglio
+        -che vengano recuperati i valori da:
+            -input id="name"    
+            -input id="Role"    
+            -input id="image"    
+        -venga creato un oggetto con questi valori per
+            -nome
+            -role
+            -picture
+        -questo oggetto sia pushato nell'array ourTeams
+            */
+    let newMemberName = document.getElementById("name").value;
+    let newMemberRole = document.getElementById("role").value;
+    let newMemberPicture = document.getElementById("image").value;
+    console.log(newMemberName);
+    console.log(newMemberRole);
+    console.log(newMemberPicture);
+
+    
+
+});

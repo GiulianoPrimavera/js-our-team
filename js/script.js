@@ -41,9 +41,9 @@ const ourTeamArray = [
     },
 ];
 
+let teamContainer = document.querySelector(".team-container");
 
 function teamCardsGenerator(){
-    let teamContainer = document.querySelector(".team-container");
     
     //ciclo che "scorre" ogni elemento dell'array e lo associa ad una variabile singleMember 
     for (let i = 0; i < ourTeamArray.length; i++ ){
@@ -91,21 +91,29 @@ addMember.addEventListener("click", function(){
          //   -role
          //  -picture
         //-inserisco i valori recuperati nell'oggetto
-        -questo oggetto sia pushato nell'array ourTeams
-            */
+        //-questo oggetto sia pushato nell'array ourTeams
+    */
            
-        
-        //creo l'oggetto
-        const newTeamMember = {}
+    teamContainer.innerHTML = "";
+    
+    
+    //creo l'oggetto
+    const newTeamMember = {}
 
 
     let newMemberName = document.getElementById("name").value;
     let newMemberRole = document.getElementById("role").value;
     let newMemberPicture = document.getElementById("image").value;
 
-    //aggiunto i valori recuperati all'oggetto
+    //aggiungo i valori recuperati all'oggetto
     newTeamMember.nome = newMemberName;
     newTeamMember.role = newMemberRole;
     newTeamMember.picture = newMemberPicture;
     console.log("nuovo membro", newTeamMember)
+
+    //pusho l'oggetto nell'array principale (ourTeamArray)
+    ourTeamArray.push(newTeamMember);
+    console.log(ourTeamArray)
+    
+    teamCardsGenerator()
 });

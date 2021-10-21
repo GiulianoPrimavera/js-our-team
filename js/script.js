@@ -41,33 +41,35 @@ const ourTeamArray = [
     },
 ]
 
-const teamContainer = document.querySelector(".team-container");
+let teamContainer = document.querySelector(".team-container");
 
 function teamCardsGenerator(){
-    //ciclo che "scorre" ogni elemento dell'array e lo associa 
+    //ciclo che "scorre" ogni elemento dell'array e lo associa ad una variabile singleMember 
     for (let i = 0; i < ourTeamArray.length; i++ ){
         const singleMember = ourTeamArray[i];
         console.log("il membro del team", singleMember);
-        for (let j in singleMember){
-             console.log(singleMember[j]);
+        for (let key in singleMember){
+            
+            console.log(singleMember[key])
+
         }
     }
     
     //genero l'html nel team-container
-   /*  teamContainer += `
+    teamContainer += `
     <div class="team-card">
-        <div class="card-image">
-            <img
-                src="img/wayne-barnett-founder-ceo.jpg"
-                alt="Wayne Barnett"
-            />
-        </div>
-        <div class="card-text">
-            <h3>Wayne Barnett</h3>
-            <p>Founder & CEO</p>
-        </div>
+    <div class="card-image">
+      <img
+        src="img/wayne-barnett-founder-ceo.jpg"
+        alt="Wayne Barnett"
+      />
     </div>
-    ` */
+    <div class="card-text">
+      <h3>Wayne Barnett</h3>
+      <p>Founder & CEO</p>
+    </div>
+  </div> 
+    `
 }
 
 teamCardsGenerator()

@@ -17,7 +17,7 @@ const ourTeamArray = [
     {
         nome: "Angela Carol",
         role: "Chief Editor",
-        picture: "angela-carol-chief-editor.jpg"
+        picture: "angela-caroll-chief-editor.jpg"
     },
     {
         nome: "Walter Gordon",
@@ -41,9 +41,9 @@ const ourTeamArray = [
     },
 ]
 
-let teamContainer = document.querySelector(".team-container");
 
 function teamCardsGenerator(){
+    let teamContainer = document.querySelector(".team-container");
     
     //ciclo che "scorre" ogni elemento dell'array e lo associa ad una variabile singleMember 
     for (let i = 0; i < ourTeamArray.length; i++ ){
@@ -56,7 +56,7 @@ function teamCardsGenerator(){
         
  
         //genero l'html nel team-container con i rispettivi parametri
-        teamContainer += `
+        teamContainer.innerHTML += `
         <div class="team-card">
         <div class="card-image">
           <img
